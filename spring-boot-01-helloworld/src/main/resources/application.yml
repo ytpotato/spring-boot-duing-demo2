@@ -1,0 +1,29 @@
+food:
+    rice: 拌饭
+    meat: 烤肉
+
+jasypt:
+  encryptor:
+    password: 123456!@#
+
+info:
+  username: ENC(XZmSuY9HRSPsQxFOiqeD1g==)
+  password: ENC(si1iCevhuF4IK7pNIQc/2Q==)
+
+spring:
+  profiles:
+    active: prod
+
+---
+spring:
+  profiles: dev
+
+server:
+  port: 8090
+
+---
+spring:
+  profiles: prod
+
+server:
+  port: 8091

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>员工列表</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.css}">
+    <script type="text/javascript" th:src="@{/webjars/jquery/3.4.1/jquery.js}"></script>
+</head>
+<body class="container">
+    <h3>中餐厅员工如下：</h3>
+
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>名称</th>
+                <th>职位</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <thead>
+            <tr th:each="guest:${guestList}">
+                <td th:text="${guest.name}">名称</td>
+                <td th:text="${guest.role}">角色</td>
+                <td>
+                    <a href="/guest/toUpdate" th:class="col-sm-2" th:href="@{/guest/toUpdate/}+${guest.name}" class="btn btn-info">编辑</a>
+                    <!--<a href="/guest/delete" th:class="col-sm-2" th:href="@{/guest/delete/}+${guest.name}" class="btn btn-info">删除</a>-->
+                    <!--声明删除按钮-->
+                    <button th:attr="del_url=@{/guest/delete/}+${guest.name}" name="del_button">删除</button>
+
+                </td>
+            </tr>
+        </thead>
+    </table>
+
+   <div class="form-group">
+        <div class="col-sm-2 control-label">
+            <a href="/guest/toAdd" th:href="@{/guest/toAdd}" class="btn btn-info">添加</a>
+        </div>
+   </div>
+
+    <!--声明删除按钮借助的表单-->
+    <form method="post" id="del_form">
+        <input type="hidden" name="_method" value="delete">
+    </form>
+</body>
+<!--增加按钮的点击监听，给表单的action赋值，然后提交-->
+<script>
+    $(function () {
+        $("button[name='del_button']").click(function () {
+            $("#del_form").prop("action",$(this).attr("del_url")).submit();
+        });
+    });
+</script>
+</html>
