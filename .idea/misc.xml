@@ -3,5 +3,23 @@
   <component name="JavaScriptSettings">
     <option name="languageLevel" value="ES6" />
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/spring-boot-01-helloworld/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-03-templates/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-03-thyme-curd/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-04-orm-jpa/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-04-orm-mybatis/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-04-thyme-restful-crud/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-duing-04-orm-mybatis-plus/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-duing-05-event-listener/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-duing-06-error-exception/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-duing-06-logging/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-duing-06-servlet/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-duing-06-swagger/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="false" project-jdk-name="1.8 (2)" project-jdk-type="JavaSDK" />
 </project>
